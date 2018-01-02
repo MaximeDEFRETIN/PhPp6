@@ -9,6 +9,9 @@
         <?php
         if ((isset($_GET['batiment'])) && ((isset($_GET['salle'])))) {
                 echo 'Batiment : ' . $_GET['batiment'] . ', Salle : ' . $_GET['salle'];
+        } else { 
+        // affichage d'un message d'erreur en cas de probleme
+            echo ' Problème !';
         }
         ?>
     </body>

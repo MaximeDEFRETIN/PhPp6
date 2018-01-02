@@ -1,14 +1,17 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <title>Exercice 3</title>
     </head>
     <body>
-        <p><a href="index.php?dateDebut=02/05/2016&amp;dateFin=27/11/2016&amp;">Quel période ?</a></p>
-
         <?php
-        if ((isset($_GET['dateDebut'])) && (isset($_GET['dateFin']))) {
-                echo $_GET['dateDebut'] . ' au ' . $_GET['dateFin'];
+        //date de debut et de fin
+        if (isset($_GET['dateDebut']) && isset($_GET['dateFin'])) { 
+            echo $_GET['dateDebut'] . ' ' . $_GET['dateFin'] . ' !';
+        } else { 
+        // Il manque des paramètres, on avertit le visiteur
+            echo 'Merci de renseigner des dates valides.';
         }
         ?>
     </body>

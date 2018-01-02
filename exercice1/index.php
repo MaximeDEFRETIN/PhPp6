@@ -7,11 +7,11 @@
         <p><a href="index.php?nom=Nemare&amp;prenom=Jean&amp">Tu me salues ?</a></p>
 
         <?php
-        if (isset($_GET['nom'])) {
-            if (isset($_GET['nom'])) {
+        //On vérife que la variable nom et la variable prenom existe dans l'URL
+        if (isset($_GET['nom']) && isset($_GET['prenom'])) {
+                //On affiche les 2 variables
                 echo 'Bonjour, ' . $_GET['nom'] . ' ' . $_GET['prenom'] . ' !';
             }
-        }
         ?>
     </body>
 </html>
